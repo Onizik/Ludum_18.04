@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StartButton" type="TextureButton" parent="."]
+margin_left = 592.566
+margin_top = 409.749
+margin_right = 656.566
+margin_bottom = 473.749
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
