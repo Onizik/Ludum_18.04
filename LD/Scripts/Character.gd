@@ -1,7 +1,7 @@
 extends Node2D
 var speed = 400
 var screen_size
-
+var x_old
 
 
 
@@ -11,6 +11,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 
 func _process(delta):
+	x_old = position
 	var direction = Vector2()
 	if Input.is_action_pressed("ui_left"):
 		direction.x -= 1
@@ -64,7 +65,11 @@ func _process(delta):
 
 	position += direction.normalized() * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
-
+	if 	x_old == position:
+		$Area2D/Sprite.visible = true
+		$Area2D/right.visible = false
+		$Area2D/left.visible = false
+	
 
 
 func _on_Character_item():
