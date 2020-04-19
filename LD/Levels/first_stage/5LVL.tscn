@@ -9,10 +9,10 @@
 [ext_resource path="res://Levels/first_stage/item1.gd" type="Script" id=7]
 [ext_resource path="res://Levels/first_stage/5LVL.gd" type="Script" id=8]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 74.6946, 138.628 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 110.417, 120.544 )
 
 [node name="5LVL" type="Node2D"]
@@ -35,7 +35,7 @@ script = ExtResource( 7 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="item1"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="4" type="RigidBody2D" parent="."]
 position = Vector2( 829.991, 388.667 )
@@ -48,7 +48,7 @@ texture = ExtResource( 5 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="4"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
 position = Vector2( 484.332, 417.872 )

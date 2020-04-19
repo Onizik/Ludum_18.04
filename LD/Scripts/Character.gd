@@ -1,7 +1,7 @@
 extends Node2D
 var speed = 400
 var screen_size
-var items = 0
+
 
 
 
@@ -20,7 +20,7 @@ func _process(delta):
 		if $Area2D/test.visible:
 			match $Area2D/itemcount.text:
 				"first":
-					items+=1
+					Global.items+=1
 			match $Area2D/doornumber.text:
 				"1":
 					get_tree().change_scene("res://Levels/first_stage/firstLVL.tscn")
