@@ -14,8 +14,14 @@ func _process(delta):
 	var direction = Vector2()
 	if Input.is_action_pressed("ui_left"):
 		direction.x -= 1
+		$Area2D/Sprite.visible = false
+		$Area2D/left.visible = true
+		$Area2D/right.visible = false
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
+		$Area2D/Sprite.visible = false
+		$Area2D/right.visible = true
+		$Area2D/left.visible = false
 	if Input.is_action_pressed("ui_accept"):
 		if $Area2D/test.visible:
 			match $Area2D/itemcount.text:
