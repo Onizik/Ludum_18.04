@@ -18,5 +18,10 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	$test.visible = true
+	$doornumber.text = body.name
 	emit_signal("hit")
-	$CollisionShape2D.set_deferred("disabled", true)
+	
+
+
+func _on_Area2D_body_exited(body):
+	$test.visible = false

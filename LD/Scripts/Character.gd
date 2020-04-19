@@ -14,6 +14,9 @@ func _process(delta):
 		direction.x -= 1
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
+	if Input.is_action_pressed("ui_accept"):
+		if $Area2D/test.visible:
+			get_tree().change_scene("res://Scenes/Menu.tscn")
 
 	position += direction.normalized() * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
