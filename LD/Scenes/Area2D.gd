@@ -19,7 +19,15 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	$test.visible = true
 	$doornumber.text = body.name
-	emit_signal("hit")
+	match body.name:
+		"item1":
+			$itemcount.text = "first"
+		"item2":
+			$itemcount.text = "second"
+		"item3":
+			$itemcount.text = "third"
+	
+	
 	
 
 

@@ -1,6 +1,8 @@
 extends Node2D
 var speed = 400
 var screen_size
+var items = 0
+
 
 
 
@@ -16,6 +18,9 @@ func _process(delta):
 		direction.x += 1
 	if Input.is_action_pressed("ui_accept"):
 		if $Area2D/test.visible:
+			match $Area2D/itemcount.text:
+				"first":
+					items+=1
 			match $Area2D/doornumber.text:
 				"1":
 					get_tree().change_scene("res://Levels/first_stage/firstLVL.tscn")
@@ -39,8 +44,22 @@ func _process(delta):
 					get_tree().change_scene("res://Levels/second_stage/9LVL.tscn")
 				"10":
 					get_tree().change_scene("res://Levels/second_stage/10LVL.tscn")
+				"11":
+					get_tree().change_scene("res://Levels/third_stage/11LVL.tscn")
+				"12":
+					get_tree().change_scene("res://Levels/third_stage/12LVL.tscn")
+				"13":
+					get_tree().change_scene("res://Levels/third_stage/13LVL.tscn")
+				"14":
+					get_tree().change_scene("res://Levels/third_stage/14LVL.tscn")
+				"15":
+					get_tree().change_scene("res://Levels/third_stage/15LVL.tscn")
 
 
 	position += direction.normalized() * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
 
+
+
+func _on_Character_item():
+	pass # Replace with function body.
