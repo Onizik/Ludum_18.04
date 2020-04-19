@@ -61,6 +61,16 @@ func _process(delta):
 					get_tree().change_scene("res://Levels/third_stage/14LVL.tscn")
 				"15":
 					get_tree().change_scene("res://Levels/third_stage/15LVL.tscn")
+				"16":
+					get_tree().change_scene("res://Levels/main_stage/16LVL.tscn")
+				"016":
+					get_tree().change_scene("res://Levels/main_stage/16LVL.tscn")
+				"116":
+					get_tree().change_scene("res://Levels/main_stage/16LVL.tscn")
+				"216":
+					get_tree().change_scene("res://Levels/main_stage/16LVL.tscn")
+				"17":
+					get_tree().change_scene("res://Levels/main_stage/Main.tscn")
 
 
 	position += direction.normalized() * delta * speed
