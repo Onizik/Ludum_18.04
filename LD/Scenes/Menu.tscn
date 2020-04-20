@@ -133,4 +133,4 @@ texture = ExtResource( 10 )
 anims/main = SubResource( 1 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="play/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="play2/AboutButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="play2/AboutButton" to="." method="_on_AboutButton_pressed"]

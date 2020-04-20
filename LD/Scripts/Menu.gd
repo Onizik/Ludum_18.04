@@ -34,3 +34,7 @@ func _on_StartButton_pressed():
 
 func _on_Timer_timeout():
 	ms+=1
+
+
+func _on_AboutButton_pressed():
+	get_tree().change_scene("res://Scenes/about.tscn")
