@@ -35,6 +35,8 @@ func _process(delta):
 			match $Area2D/doornumber.text:
 				"1":
 					get_tree().change_scene("res://Levels/first_stage/firstLVL.tscn")
+					Global.settimer = true
+					Embi.play()
 				"01":
 					get_tree().change_scene("res://Levels/main_stage/Main.tscn")
 				"2":
@@ -82,7 +84,7 @@ func _process(delta):
 						Global.item2 = false
 						Global.item3 = false
 						Global.enemyspeed = 50
-					else: Global.loh = true
+						Global.settimer = false
 				"fight":
 					Global.enpos = true
 			Global.enemyspeed +=10
@@ -106,6 +108,7 @@ func _process(delta):
 		Global.item2 = false
 		Global.item3 = false
 		Global.enemyspeed = 50
+		Global.settimer = false
 
 
 

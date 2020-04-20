@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scripts/global.tscn"
+Embi="*res://Assets/music/embi.tscn"
 
 [display]
 

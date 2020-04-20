@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/locs/1stage/malbert_1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
@@ -16,6 +16,23 @@ extents = Vector2( 102.504, 112.816 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 110.155, 115.091 )
 
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("0000/Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
 
@@ -31,10 +48,12 @@ gravity_scale = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0000"]
 shape = SubResource( 1 )
 
-[node name="in" parent="0000" instance=ExtResource( 5 )]
+[node name="Sprite" type="Sprite" parent="0000"]
+
+[node name="in" parent="0000/Sprite" instance=ExtResource( 5 )]
 position = Vector2( -113.727, -3.87708 )
 
-[node name="out" parent="0000" instance=ExtResource( 3 )]
+[node name="out" parent="0000/Sprite" instance=ExtResource( 3 )]
 position = Vector2( 129.236, -11.6312 )
 
 [node name="1" type="RigidBody2D" parent="."]
@@ -66,3 +85,6 @@ texture = ExtResource( 4 )
 position = Vector2( 802.189, 256.321 )
 scale = Vector2( 0.519198, 0.519198 )
 texture = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/New Anim" = SubResource( 3 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/embient.ogg-a5cee33ef3c2fb34a5bb1c8f3add28a9.oggstr"
+
+[deps]
+
+source_file="res://Assets/music/embient.ogg"
+dest_files=[ "res://.import/embient.ogg-a5cee33ef3c2fb34a5bb1c8f3add28a9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
