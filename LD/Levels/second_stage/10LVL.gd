@@ -10,7 +10,7 @@ extends Node2D
 func _ready():
 	$AnimationPlayer.play("2")
 
-func _process(delta):
-	if Global.item3 :
-		$item3/CollisionShape2D.disabled = true
-		$item3.visible = false
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
