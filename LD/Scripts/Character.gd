@@ -79,6 +79,8 @@ func _process(delta):
 					if Global.item1 && Global.item2 && Global.item3:
 						get_tree().change_scene("res://Scenes/Menu.tscn")
 					else: Global.loh = true
+				"enemy":
+					get_tree().change_scene("res://Scenes/Menu.tscn")
 
 
 	position += direction.normalized() * delta * speed
@@ -87,7 +89,7 @@ func _process(delta):
 		$Area2D/Sprite.visible = true
 		$Area2D/right.visible = false
 		$Area2D/left.visible = false
-	
+	Global.ggpos = position.x
 
 
 func _on_Character_item():

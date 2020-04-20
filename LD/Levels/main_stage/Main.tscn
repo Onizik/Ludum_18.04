@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/doors/door1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets/doors/portal2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/loh.png" type="Texture" id=6]
 [ext_resource path="res://Levels/main_stage/MainStage.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/enemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/enemy.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 102.504, 112.816 )
@@ -57,3 +59,7 @@ position = Vector2( 144.735, 454.674 )
 visible = false
 position = Vector2( 831.978, 104.534 )
 texture = ExtResource( 6 )
+
+[node name="enemy" parent="." instance=ExtResource( 8 )]
+position = Vector2( -471.12, 458.232 )
+script = ExtResource( 9 )
