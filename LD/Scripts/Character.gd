@@ -77,7 +77,7 @@ func _process(delta):
 					get_tree().change_scene("res://Levels/main_stage/Main.tscn")
 				"0000":
 					if Global.item1 && Global.item2 && Global.item3:
-						get_tree().change_scene("res://Scenes/Menu.tscn")
+						get_tree().change_scene("res://Scenes/death.tscn")
 						Global.item1 = false
 						Global.item2 = false
 						Global.item3 = false
@@ -100,7 +100,7 @@ func _process(delta):
 		$Area2D/left.visible = false
 	Global.ggpos = position.x
 	if $Area2D/doornumber.text == "enemy":
-		get_tree().change_scene("res://Scenes/Menu.tscn")
+		get_tree().change_scene("res://Scenes/death.tscn")
 		Global.item1 = false
 		Global.item2 = false
 		Global.item3 = false
