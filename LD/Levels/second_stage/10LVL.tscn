@@ -1,13 +1,16 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/out.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/floor.png" type="Texture" id=2]
-[ext_resource path="res://Assets/wall.png" type="Texture" id=3]
+[ext_resource path="res://Levels/stage3_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/locs/3stage/NovyKholst6Yi.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/locs/3stage/besedka1YK.png" type="Texture" id=5]
 [ext_resource path="res://Assets/items/blue.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/10lvl.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Levels/second_stage/10LVL.gd" type="Script" id=9]
+[ext_resource path="res://Assets/locs/3stage/besedka1YKYUI.png" type="Texture" id=10]
+[ext_resource path="res://Assets/locs/other stuff/NovyKholst6fu.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 118.916, 108.402 )
@@ -35,14 +38,12 @@ tracks/0/keys = {
 [node name="thirdLVL" type="Node2D"]
 script = ExtResource( 9 )
 
-[node name="wall" type="Sprite" parent="."]
-modulate = Color( 0, 0.0392157, 1, 1 )
-position = Vector2( 640.021, 210.026 )
-texture = ExtResource( 3 )
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
 
-[node name="floor" type="Sprite" parent="."]
-position = Vector2( 640.012, 570.004 )
-texture = ExtResource( 2 )
+[node name="bes1" type="Sprite" parent="."]
+position = Vector2( 1234.53, 222.006 )
+scale = Vector2( 0.204193, 0.204193 )
+texture = ExtResource( 10 )
 
 [node name="9" type="RigidBody2D" parent="."]
 position = Vector2( 178.555, 381.586 )
@@ -57,7 +58,7 @@ shape = SubResource( 1 )
 position = Vector2( 449.718, 403.508 )
 
 [node name="item2" type="RigidBody2D" parent="."]
-position = Vector2( 1039.96, 372.664 )
+position = Vector2( 1097.03, 372.664 )
 gravity_scale = 0.0
 script = ExtResource( 7 )
 
@@ -66,6 +67,7 @@ position = Vector2( 0, 75.4445 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="item2"]
+visible = false
 shape = SubResource( 2 )
 
 [node name="enemy" parent="." instance=ExtResource( 8 )]
@@ -73,3 +75,18 @@ position = Vector2( -1280, 450 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/2 = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 132.796, 380.873 )
+scale = Vector2( 0.757402, 0.757402 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1351.79, 354.412 )
+scale = Vector2( 0.236713, 0.236713 )
+texture = ExtResource( 5 )
+
+[node name="shadow" type="Sprite" parent="."]
+position = Vector2( 974.496, 466.234 )
+scale = Vector2( 0.994663, 0.994663 )
+texture = ExtResource( 11 )

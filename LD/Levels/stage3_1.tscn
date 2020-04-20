@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/locs/3stage/NovyKholst6TsRKts.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 643.476, 361.949 )
+scale = Vector2( 0.670292, 0.670292 )
+texture = ExtResource( 1 )
