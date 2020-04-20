@@ -1,7 +1,5 @@
-extends Node
-var item1 = false
-var item2 = false
-var item3 = false
+extends RigidBody2D
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -13,6 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Global.item2:
+		$CollisionShape2D.disabled = true
+		visible = false

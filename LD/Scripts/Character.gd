@@ -27,7 +27,11 @@ func _process(delta):
 		if $Area2D/test.visible:
 			match $Area2D/itemcount.text:
 				"first":
-					Global.items+=1
+					Global.item1 = true
+				"second":
+					Global.item2 = true
+				"third":
+					Global.item3 = true
 			match $Area2D/doornumber.text:
 				"1":
 					get_tree().change_scene("res://Levels/first_stage/firstLVL.tscn")

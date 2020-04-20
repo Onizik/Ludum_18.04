@@ -60,13 +60,13 @@ __meta__ = {
 [node name="left" type="AnimatedSprite" parent="Area2D"]
 visible = false
 frames = SubResource( 2 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="right" type="AnimatedSprite" parent="Area2D"]
 visible = false
 frames = SubResource( 2 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

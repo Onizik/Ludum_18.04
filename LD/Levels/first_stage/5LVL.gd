@@ -11,7 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	if Global.items >0:
+	if Global.item1 :
 		$item1/CollisionShape2D.disabled = true
 		$item1.visible = false
 
