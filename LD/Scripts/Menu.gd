@@ -10,6 +10,7 @@ var s = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$hands.play("main")
+	Menu.play()
 
 func _process(delta):
 	if ms>9:
@@ -30,6 +31,7 @@ func _process(delta):
 
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://Levels/main_stage/Main.tscn")
+	Menu.stop()
 
 
 func _on_Timer_timeout():

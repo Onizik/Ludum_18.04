@@ -23,6 +23,9 @@ config/icon="res://icon.png"
 
 Global="*res://Scripts/global.tscn"
 Embi="*res://Assets/music/embi.tscn"
+Menu="*res://Assets/music/menu.tscn"
+Win="*res://Assets/music/win.tscn"
+Death="*res://Assets/music/death.tscn"
 
 [display]
 

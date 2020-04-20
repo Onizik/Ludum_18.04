@@ -80,6 +80,7 @@ func _process(delta):
 				"0000":
 					if Global.item1 && Global.item2 && Global.item3:
 						get_tree().change_scene("res://Scenes/final.tscn")
+						Embi.stop()
 						Global.item1 = false
 						Global.item2 = false
 						Global.item3 = false
@@ -104,6 +105,7 @@ func _process(delta):
 	Global.ggpos = position.x
 	if $Area2D/doornumber.text == "enemy":
 		get_tree().change_scene("res://Scenes/death.tscn")
+		Embi.stop()
 		Global.item1 = false
 		Global.item2 = false
 		Global.item3 = false
