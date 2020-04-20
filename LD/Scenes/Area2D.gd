@@ -33,3 +33,13 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	$test.visible = false
+	
+
+
+func _on_Area2D_area_entered(area):
+	$test.visible = true
+	$doornumber.text = area.name
+
+
+func _on_Area2D_area_exited(area):
+	$test.visible = false

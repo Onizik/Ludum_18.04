@@ -9,7 +9,7 @@
 script = ExtResource( 2 )
 
 [node name="norm" type="Sprite" parent="."]
-position = Vector2( 606.54, 325.246 )
+position = Vector2( 633.55, 392.772 )
 texture = ExtResource( 4 )
 
 [node name="spooky" type="Sprite" parent="norm"]
@@ -17,10 +17,10 @@ visible = false
 texture = ExtResource( 3 )
 
 [node name="StartButton" type="TextureButton" parent="."]
-margin_left = 569.711
-margin_top = 511.718
-margin_right = 633.711
-margin_bottom = 575.718
+margin_left = 570.939
+margin_top = 647.997
+margin_right = 634.939
+margin_bottom = 711.997
 texture_normal = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

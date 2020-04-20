@@ -79,9 +79,9 @@ func _process(delta):
 					if Global.item1 && Global.item2 && Global.item3:
 						get_tree().change_scene("res://Scenes/Menu.tscn")
 					else: Global.loh = true
-				"enemy":
-					get_tree().change_scene("res://Scenes/Menu.tscn")
-
+				"fight":
+					Global.enpos = true
+			Global.enemyspeed +=10
 
 	position += direction.normalized() * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
@@ -90,7 +90,8 @@ func _process(delta):
 		$Area2D/right.visible = false
 		$Area2D/left.visible = false
 	Global.ggpos = position.x
-
+	if $Area2D/doornumber.text == "enemy":
+		get_tree().change_scene("res://Scenes/Menu.tscn")
 
 func _on_Character_item():
 	pass # Replace with function body.

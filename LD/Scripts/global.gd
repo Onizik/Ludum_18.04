@@ -5,6 +5,8 @@ var item3 = false
 var loh = false
 
 var ggpos =0
+var enpos = false
+var enemyspeed = 50
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -18,3 +20,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Timer_timeout():
+	enemyspeed += 1

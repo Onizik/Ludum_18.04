@@ -1,5 +1,5 @@
 extends Node2D
-var speed = 50
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,7 +12,10 @@ func _ready():
 func _process(delta):
 	var direction = Vector2()
 	direction.x = Global.ggpos
-	position += direction.normalized() * delta * speed
+	position += direction.normalized() * delta * Global.enemyspeed
+	if Global.enpos == true:
+		position.x = -1276.316
+		Global.enpos = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

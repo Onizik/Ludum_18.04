@@ -8,13 +8,53 @@
 [ext_resource path="res://Assets/loh.png" type="Texture" id=6]
 [ext_resource path="res://Levels/main_stage/MainStage.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/enemy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/enemy.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 102.504, 112.816 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 110.155, 115.091 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "1"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("1/Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("0000/Sprite/red:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -360.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("0000/Sprite/green:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
@@ -28,11 +68,13 @@ texture = ExtResource( 4 )
 
 [node name="red" type="Sprite" parent="0000/Sprite"]
 position = Vector2( -96.8537, 20.7637 )
+rotation = -5.40354
 scale = Vector2( 0.596443, 0.596443 )
 texture = ExtResource( 3 )
 
 [node name="green" type="Sprite" parent="0000/Sprite"]
 position = Vector2( 102.191, 6.44386 )
+rotation = 5.40354
 scale = Vector2( 0.596, 0.596 )
 texture = ExtResource( 5 )
 
@@ -47,13 +89,14 @@ gravity_scale = 0.0
 texture = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="1"]
+rotation = 5.40354
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1"]
 shape = SubResource( 1 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 144.735, 454.674 )
+position = Vector2( 275.045, 470.426 )
 
 [node name="loh" type="Sprite" parent="."]
 visible = false
@@ -61,5 +104,7 @@ position = Vector2( 831.978, 104.534 )
 texture = ExtResource( 6 )
 
 [node name="enemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( -471.12, 458.232 )
-script = ExtResource( 9 )
+position = Vector2( -1280, 450 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/1 = SubResource( 3 )

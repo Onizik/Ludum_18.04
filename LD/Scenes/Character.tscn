@@ -41,10 +41,10 @@ shape = SubResource( 1 )
 
 [node name="doornumber" type="Label" parent="Area2D"]
 visible = false
-margin_left = -19.5481
-margin_top = 57.0153
-margin_right = 20.4519
-margin_bottom = 71.0153
+margin_left = 87.7563
+margin_top = -137.766
+margin_right = 127.756
+margin_bottom = -123.766
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,14 +60,16 @@ __meta__ = {
 [node name="left" type="AnimatedSprite" parent="Area2D"]
 visible = false
 frames = SubResource( 2 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="right" type="AnimatedSprite" parent="Area2D"]
 visible = false
 frames = SubResource( 2 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_Area2D_area_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
