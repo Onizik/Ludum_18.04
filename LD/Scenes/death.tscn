@@ -1,12 +1,29 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/enemy.png" type="Texture" id=1]
 [ext_resource path="res://Assets/menu/NovyKholst8UKR.png" type="Texture" id=2]
 [ext_resource path="res://Assets/menu/TsUPYVP.png" type="Texture" id=3]
-[ext_resource path="res://Assets/menu/paly.png" type="Texture" id=4]
+[ext_resource path="res://Assets/menu/Untitled-1.png" type="Texture" id=4]
 [ext_resource path="res://Assets/menu/hand1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/enemy2.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/death.gd" type="Script" id=7]
+[ext_resource path="res://Assets/45P.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "1"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("hands:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 60 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1732.3, 429.656 ), Vector2( 1655.04, 429.656 ) ]
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
@@ -25,16 +42,6 @@ position = Vector2( 527.825, 273.435 )
 rotation = 0.380482
 texture = ExtResource( 2 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 551.836
-margin_top = 489.803
-margin_right = 724.836
-margin_bottom = 659.803
-texture_normal = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite4" type="Sprite" parent="."]
 position = Vector2( 584.145, 766.367 )
 rotation = -2.28464
@@ -44,4 +51,22 @@ texture = ExtResource( 1 )
 position = Vector2( 710.796, 779.29 )
 rotation = 2.15723
 texture = ExtResource( 6 )
+
+[node name="hands" type="Sprite" parent="."]
+position = Vector2( 1655.04, 429.656 )
+scale = Vector2( 2.23698, 1.39486 )
+texture = ExtResource( 8 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 543.836
+margin_top = 504.803
+margin_right = 743.836
+margin_bottom = 674.803
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/1 = SubResource( 1 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
