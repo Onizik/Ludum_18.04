@@ -75,6 +75,10 @@ func _process(delta):
 					get_tree().change_scene("res://Levels/main_stage/16LVL.tscn")
 				"17":
 					get_tree().change_scene("res://Levels/main_stage/Main.tscn")
+				"0000":
+					if Global.item1 && Global.item2 && Global.item3:
+						get_tree().change_scene("res://Scenes/Menu.tscn")
+					else: Global.loh = true
 
 
 	position += direction.normalized() * delta * speed

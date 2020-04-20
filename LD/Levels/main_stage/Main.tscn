@@ -1,16 +1,44 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/doors/door1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/doors/portal1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/doors/door2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/doors/portal2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/loh.png" type="Texture" id=6]
+[ext_resource path="res://Levels/main_stage/MainStage.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 102.504, 112.816 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 110.155, 115.091 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="0000" type="RigidBody2D" parent="."]
+position = Vector2( 1039.61, 409.545 )
+gravity_scale = 0.0
+
+[node name="Sprite" type="Sprite" parent="0000"]
+texture = ExtResource( 4 )
+
+[node name="red" type="Sprite" parent="0000/Sprite"]
+position = Vector2( -96.8537, 20.7637 )
+scale = Vector2( 0.596443, 0.596443 )
+texture = ExtResource( 3 )
+
+[node name="green" type="Sprite" parent="0000/Sprite"]
+position = Vector2( 102.191, 6.44386 )
+scale = Vector2( 0.596, 0.596 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0000"]
+shape = SubResource( 2 )
 
 [node name="1" type="RigidBody2D" parent="."]
-position = Vector2( 699.074, 431.5 )
+position = Vector2( 525.805, 411.452 )
 gravity_scale = 0.0
 
 [node name="door" type="Sprite" parent="1"]
@@ -23,4 +51,9 @@ texture = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 435.423, 446.775 )
+position = Vector2( 144.735, 454.674 )
+
+[node name="loh" type="Sprite" parent="."]
+visible = false
+position = Vector2( 831.978, 104.534 )
+texture = ExtResource( 6 )
