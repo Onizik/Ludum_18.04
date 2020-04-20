@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/menu/TsUPUKI.png" type="Texture" id=1]
 [ext_resource path="res://Assets/eNePE8-WUyQ.png" type="Texture" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Assets/7W7gMUnmAkc.png" type="Texture" id=4]
 [ext_resource path="res://Assets/menu/Untitled-1.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/about.gd" type="Script" id=6]
+[ext_resource path="res://Assets/NovyKholst5TsRUFUKR.png" type="Texture" id=7]
+[ext_resource path="res://Assets/NovyKholst5TsRUUKRITs.png" type="Texture" id=8]
+[ext_resource path="res://Assets/NovyKholst5TsRUdjr.png" type="Texture" id=9]
+[ext_resource path="res://Assets/NovyKholst5TsRUYaV.png" type="Texture" id=10]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
@@ -39,4 +43,24 @@ texture_normal = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 377.529, 228.636 )
+scale = Vector2( 0.451289, 0.451289 )
+texture = ExtResource( 7 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 491.904, 543.701 )
+scale = Vector2( 0.307958, 0.307958 )
+texture = ExtResource( 8 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 1068.53, 129.303 )
+scale = Vector2( 0.30243, 0.30243 )
+texture = ExtResource( 9 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 1052.38, 530.436 )
+scale = Vector2( 0.279015, 0.279015 )
+texture = ExtResource( 10 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -79,7 +79,7 @@ func _process(delta):
 					get_tree().change_scene("res://Levels/main_stage/Main.tscn")
 				"0000":
 					if Global.item1 && Global.item2 && Global.item3:
-						get_tree().change_scene("res://Scenes/death.tscn")
+						get_tree().change_scene("res://Scenes/final.tscn")
 						Global.item1 = false
 						Global.item2 = false
 						Global.item3 = false
