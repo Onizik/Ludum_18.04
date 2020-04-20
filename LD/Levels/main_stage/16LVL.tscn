@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/in.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/floor.png" type="Texture" id=2]
 [ext_resource path="res://Assets/wall.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/enemy.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/doors/door1.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 44.8202, 108.666 )
@@ -25,71 +24,56 @@ texture = ExtResource( 2 )
 position = Vector2( 1143.71, 379.021 )
 gravity_scale = 0.0
 
-[node name="Sprite4" type="Sprite" parent="216"]
-scale = Vector2( 0.850089, 0.792081 )
-texture = ExtResource( 7 )
-
-[node name="in" parent="216/Sprite4" instance=ExtResource( 1 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="216"]
 visible = false
 shape = SubResource( 1 )
+
+[node name="in" parent="216" instance=ExtResource( 1 )]
+scale = Vector2( 0.850089, 0.792081 )
 
 [node name="116" type="RigidBody2D" parent="."]
 position = Vector2( 621.708, 377.675 )
 gravity_scale = 0.0
 
-[node name="Sprite4" type="Sprite" parent="116"]
-scale = Vector2( 0.850089, 0.792081 )
-texture = ExtResource( 7 )
-
-[node name="in" parent="116/Sprite4" instance=ExtResource( 1 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="116"]
 visible = false
 shape = SubResource( 1 )
+
+[node name="in" parent="116" instance=ExtResource( 1 )]
+scale = Vector2( 0.850089, 0.792081 )
 
 [node name="17" type="RigidBody2D" parent="."]
 position = Vector2( 882.707, 376.33 )
 gravity_scale = 0.0
 
-[node name="Sprite4" type="Sprite" parent="17"]
-scale = Vector2( 0.850089, 0.792081 )
-texture = ExtResource( 7 )
-
-[node name="in" parent="17/Sprite4" instance=ExtResource( 1 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="17"]
 visible = false
 shape = SubResource( 1 )
+
+[node name="in" parent="17" instance=ExtResource( 1 )]
+scale = Vector2( 0.850089, 0.792081 )
 
 [node name="016" type="RigidBody2D" parent="."]
 position = Vector2( 359.363, 381.711 )
 gravity_scale = 0.0
 
-[node name="Sprite4" type="Sprite" parent="016"]
-scale = Vector2( 0.850089, 0.792081 )
-texture = ExtResource( 7 )
-
-[node name="in" parent="016/Sprite4" instance=ExtResource( 1 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="016"]
 visible = false
 shape = SubResource( 1 )
+
+[node name="in" parent="016" instance=ExtResource( 1 )]
+scale = Vector2( 0.850089, 0.792081 )
 
 [node name="16" type="RigidBody2D" parent="."]
 position = Vector2( 110.472, 384.402 )
 gravity_scale = 0.0
 
-[node name="Sprite4" type="Sprite" parent="16"]
-scale = Vector2( 0.850089, 0.792081 )
-texture = ExtResource( 7 )
-
-[node name="in" parent="16/Sprite4" instance=ExtResource( 1 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="16"]
 visible = false
 shape = SubResource( 1 )
+
+[node name="in" parent="16" instance=ExtResource( 1 )]
+scale = Vector2( 0.850089, 0.792081 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
 position = Vector2( 189.894, 464.959 )
