@@ -10,8 +10,6 @@ extends Node2D
 func _ready():
 	pass
 func _process(delta):
-	if Global.loh :
-		$loh.visible = true
-	else: $loh.visible = false
+	pass
 	
 	
