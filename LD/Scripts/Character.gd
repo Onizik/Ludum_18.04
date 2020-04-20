@@ -81,6 +81,7 @@ func _process(delta):
 						Global.item1 = false
 						Global.item2 = false
 						Global.item3 = false
+						Global.enemyspeed = 50
 					else: Global.loh = true
 				"fight":
 					Global.enpos = true
@@ -104,6 +105,7 @@ func _process(delta):
 		Global.item1 = false
 		Global.item2 = false
 		Global.item3 = false
+		Global.enemyspeed = 50
 
 
 
