@@ -81,14 +81,19 @@ func _process(delta):
 						Global.item1 = false
 						Global.item2 = false
 						Global.item3 = false
-						Global.enemyseep = 50
 					else: Global.loh = true
 				"fight":
 					Global.enpos = true
 			Global.enemyspeed +=10
-
+			
 	position += direction.normalized() * delta * speed
 	position.x = clamp(position.x, 0, screen_size.x)
+	if Global.item1:
+		$Area2D/test/test.visible = true
+	if Global.item2:
+		$Area2D/test/test2.visible = true
+	if Global.item3:
+		$Area2D/test/test3.visible = true
 	if 	x_old == position:
 		$Area2D/Sprite.visible = true
 		$Area2D/right.visible = false
@@ -99,7 +104,8 @@ func _process(delta):
 		Global.item1 = false
 		Global.item2 = false
 		Global.item3 = false
-		Global.enemyseep = 50
+
+
 
 func _on_Character_item():
 	pass # Replace with function body.

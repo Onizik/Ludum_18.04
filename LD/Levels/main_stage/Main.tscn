@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://Assets/locs/1stage/malbert_1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/out.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/in.tscn" type="PackedScene" id=5]
@@ -16,8 +17,13 @@ extents = Vector2( 110.155, 115.091 )
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 640.822, 360.476 )
+scale = Vector2( 0.667515, 0.667515 )
+texture = ExtResource( 1 )
+
 [node name="0000" type="RigidBody2D" parent="."]
-position = Vector2( 1039.61, 409.545 )
+position = Vector2( 750.512, 358.501 )
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0000"]
@@ -30,7 +36,7 @@ position = Vector2( -113.727, -3.87708 )
 position = Vector2( 129.236, -11.6312 )
 
 [node name="1" type="RigidBody2D" parent="."]
-position = Vector2( 525.805, 411.452 )
+position = Vector2( 130.451, 359.354 )
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1"]
@@ -39,7 +45,7 @@ shape = SubResource( 2 )
 [node name="in" parent="1" instance=ExtResource( 5 )]
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 275.045, 470.426 )
+position = Vector2( 394.136, 512.169 )
 
 [node name="loh" type="Sprite" parent="."]
 visible = false

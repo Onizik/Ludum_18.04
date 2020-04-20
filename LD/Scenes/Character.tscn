@@ -18,7 +18,7 @@
 [ext_resource path="res://Assets/anim/idle/doc253986180_546440338.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 33.3793, 32.9743 )
+extents = Vector2( 23.9007, 184.65 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -30,18 +30,18 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "default",
 "speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
 } ]
 
 [node name="Character" type="Node2D"]
@@ -86,16 +86,35 @@ frame = 3
 playing = true
 flip_h = true
 
-[node name="test" type="AnimatedSprite" parent="Area2D"]
+[node name="Sprite" type="AnimatedSprite" parent="Area2D"]
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="test" type="Sprite" parent="Area2D"]
+visible = false
+
+[node name="test" type="AnimatedSprite" parent="Area2D/test"]
 visible = false
 position = Vector2( -2.01187, -252.52 )
 scale = Vector2( 0.263734, 0.263734 )
-frames = SubResource( 3 )
+frames = SubResource( 4 )
 playing = true
 
-[node name="Sprite" type="AnimatedSprite" parent="Area2D"]
+[node name="test2" type="AnimatedSprite" parent="Area2D/test"]
+visible = false
+position = Vector2( 35.9882, -209.77 )
+scale = Vector2( 0.263734, 0.263734 )
 frames = SubResource( 4 )
-frame = 2
+frame = 4
+playing = true
+
+[node name="test3" type="AnimatedSprite" parent="Area2D/test"]
+visible = false
+position = Vector2( -41.912, -210.72 )
+scale = Vector2( 0.263734, 0.263734 )
+frames = SubResource( 4 )
+frame = 4
 playing = true
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_Area2D_area_exited"]
