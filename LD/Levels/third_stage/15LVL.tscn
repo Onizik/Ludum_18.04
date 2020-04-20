@@ -64,7 +64,7 @@ position = Vector2( 205.197, 388.539 )
 gravity_scale = 0.0
 
 [node name="Sprite" type="Sprite" parent="item3"]
-position = Vector2( 0, 5.99638 )
+position = Vector2( 0, 64.3373 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="item3"]

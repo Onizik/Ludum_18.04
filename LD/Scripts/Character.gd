@@ -78,6 +78,10 @@ func _process(delta):
 				"0000":
 					if Global.item1 && Global.item2 && Global.item3:
 						get_tree().change_scene("res://Scenes/Menu.tscn")
+						Global.item1 = false
+						Global.item2 = false
+						Global.item3 = false
+						Global.enemyseep = 50
 					else: Global.loh = true
 				"fight":
 					Global.enpos = true
@@ -92,6 +96,10 @@ func _process(delta):
 	Global.ggpos = position.x
 	if $Area2D/doornumber.text == "enemy":
 		get_tree().change_scene("res://Scenes/Menu.tscn")
+		Global.item1 = false
+		Global.item2 = false
+		Global.item3 = false
+		Global.enemyseep = 50
 
 func _on_Character_item():
 	pass # Replace with function body.
