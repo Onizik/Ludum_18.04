@@ -1,18 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/anim/menu/doc253986180_546406546.png" type="Texture" id=3]
+[ext_resource path="res://Assets/anim/menu/doc253986180_546406558.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="norm" type="Sprite" parent="."]
+position = Vector2( 606.54, 325.246 )
+texture = ExtResource( 4 )
+
+[node name="spooky" type="Sprite" parent="norm"]
+visible = false
+texture = ExtResource( 3 )
+
 [node name="StartButton" type="TextureButton" parent="."]
-margin_left = 592.566
-margin_top = 409.749
-margin_right = 656.566
-margin_bottom = 473.749
+margin_left = 569.711
+margin_top = 511.718
+margin_right = 633.711
+margin_bottom = 575.718
 texture_normal = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
