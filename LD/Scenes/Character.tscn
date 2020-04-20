@@ -75,14 +75,14 @@ __meta__ = {
 visible = false
 position = Vector2( 2.70752, 0.902512 )
 frames = SubResource( 2 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="right" type="AnimatedSprite" parent="Area2D"]
 visible = false
 position = Vector2( -6.3175, 0 )
 frames = SubResource( 2 )
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 
@@ -91,12 +91,11 @@ visible = false
 position = Vector2( -2.01187, -252.52 )
 scale = Vector2( 0.263734, 0.263734 )
 frames = SubResource( 3 )
-frame = 3
 playing = true
 
 [node name="Sprite" type="AnimatedSprite" parent="Area2D"]
 frames = SubResource( 4 )
-frame = 3
+frame = 2
 playing = true
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_Area2D_area_exited"]

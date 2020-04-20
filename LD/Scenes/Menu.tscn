@@ -114,17 +114,17 @@ __meta__ = {
 }
 
 [node name="hand1" type="Sprite" parent="."]
-position = Vector2( 1077.04, 38.2815 )
-rotation = -0.267632
+position = Vector2( 1049.46, 50.7489 )
+rotation = -0.249629
 texture = ExtResource( 9 )
 
 [node name="hand2" type="Sprite" parent="."]
-position = Vector2( 229.771, 30.5344 )
+position = Vector2( 248.424, 61.0581 )
 rotation = -5.9411
 texture = ExtResource( 8 )
 
 [node name="hand3" type="Sprite" parent="."]
-position = Vector2( 476.161, 681.909 )
+position = Vector2( 462.465, 700.241 )
 rotation = -1.26885
 scale = Vector2( 0.736667, 0.736667 )
 texture = ExtResource( 10 )
