@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Paints_of_mind.png-3587b9c649abd508f6f73a6e35d02d05.stex"
+path="res://.import/Paints_of_mind.png-a947fa79a9cdd14c67605cb12f3d2dff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/Paints_of_mind.png"
-dest_files=[ "res://.import/Paints_of_mind.png-3587b9c649abd508f6f73a6e35d02d05.stex" ]
+source_file="res://Build/Paints_of_mind.png"
+dest_files=[ "res://.import/Paints_of_mind.png-a947fa79a9cdd14c67605cb12f3d2dff.stex" ]
 
 [params]
 

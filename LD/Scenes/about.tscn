@@ -63,4 +63,9 @@ texture = ExtResource( 9 )
 position = Vector2( 1052.38, 530.436 )
 scale = Vector2( 0.279015, 0.279015 )
 texture = ExtResource( 10 )
+
+[node name="menu" type="TouchScreenButton" parent="."]
+position = Vector2( 552.301, 532.526 )
+normal = ExtResource( 5 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

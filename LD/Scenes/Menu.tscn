@@ -131,6 +131,18 @@ texture = ExtResource( 10 )
 
 [node name="hands" type="AnimationPlayer" parent="."]
 anims/main = SubResource( 1 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 959.045, 305.72 )
+scale = Vector2( 0.723755, 0.723755 )
+normal = ExtResource( 7 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 914.184, 496.762 )
+scale = Vector2( 0.702923, 0.702923 )
+normal = ExtResource( 6 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="play/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="play2/AboutButton" to="." method="_on_AboutButton_pressed"]
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]

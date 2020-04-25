@@ -40,3 +40,12 @@ func _on_Timer_timeout():
 
 func _on_AboutButton_pressed():
 	get_tree().change_scene("res://Scenes/about.tscn")
+
+
+func _on_TouchScreenButton_pressed():
+	get_tree().change_scene("res://Levels/main_stage/Main.tscn")
+	Menu.stop()
+
+
+func _on_TouchScreenButton2_pressed():
+	get_tree().change_scene("res://Scenes/about.tscn")

@@ -13,17 +13,17 @@ func _ready():
 func _process(delta):
 	x_old = position
 	var direction = Vector2()
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") || Global.left:
 		direction.x -= 1
 		$Area2D/Sprite.visible = false
 		$Area2D/left.visible = true
 		$Area2D/right.visible = false
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") || Global.right:
 		direction.x += 1
 		$Area2D/Sprite.visible = false
 		$Area2D/right.visible = true
 		$Area2D/left.visible = false
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("ui_accept") || Global.action:
 		if $Area2D/test.visible:
 			match $Area2D/itemcount.text:
 				"first":
@@ -37,12 +37,14 @@ func _process(delta):
 					get_tree().change_scene("res://Levels/first_stage/firstLVL.tscn")
 					Global.settimer = true
 					Embi.play()
+					Global.doormeme = false
 				"01":
 					get_tree().change_scene("res://Levels/main_stage/Main.tscn")
 				"2":
 					get_tree().change_scene("res://Levels/first_stage/secondLVL.tscn")
 				"3":
 					get_tree().change_scene("res://Levels/first_stage/thirdLVL.tscn")
+					Global.doormeme = true
 				"4":
 					get_tree().change_scene("res://Levels/first_stage/4LVL.tscn")
 				"5":
@@ -104,14 +106,25 @@ func _process(delta):
 		$Area2D/left.visible = false
 	Global.ggpos = position.x
 	if $Area2D/doornumber.text == "enemy":
-		get_tree().change_scene("res://Scenes/death.tscn")
-		Embi.stop()
-		Global.item1 = false
-		Global.item2 = false
-		Global.item3 = false
-		Global.enemyspeed = 50
-		Global.settimer = false
+		if Global.doormeme:
+			get_tree().change_scene("res://Scenes/meme.tscn")
+			Embi.stop()
+			Global.item1 = false
+			Global.item2 = false
+			Global.item3 = false
+			Global.enemyspeed = 50
+			Global.settimer = false
+		else:
+			get_tree().change_scene("res://Scenes/death.tscn")
+			Embi.stop()
+			Global.item1 = false
+			Global.item2 = false
+			Global.item3 = false
+			Global.enemyspeed = 50
+			Global.settimer = false
+			
 
+		
 
 
 func _on_Character_item():

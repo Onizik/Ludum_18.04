@@ -18,6 +18,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	$test.visible = true
+	Global.action_visible = true
 	$doornumber.text = body.name
 	match body.name:
 		"item1":
@@ -33,13 +34,16 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	$test.visible = false
+	Global.action_visible = false
 	
 
 
 func _on_Area2D_area_entered(area):
 	$test.visible = true
+	Global.action_visible = true
 	$doornumber.text = area.name
 
 
 func _on_Area2D_area_exited(area):
 	$test.visible = false
+	Global.action_visible = false

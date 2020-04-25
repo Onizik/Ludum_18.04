@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/out.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/stage3_1.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Levels/second_stage/10LVL.gd" type="Script" id=9]
 [ext_resource path="res://Assets/locs/3stage/besedka1YKYUI.png" type="Texture" id=10]
 [ext_resource path="res://Assets/locs/other stuff/NovyKholst6fu.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/touch_buttons.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 118.916, 108.402 )
@@ -63,7 +64,7 @@ gravity_scale = 0.0
 script = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="item2"]
-position = Vector2( 0, 75.4445 )
+position = Vector2( 0, 17.3805 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="item2"]
@@ -90,3 +91,5 @@ texture = ExtResource( 5 )
 position = Vector2( 974.496, 466.234 )
 scale = Vector2( 0.994663, 0.994663 )
 texture = ExtResource( 11 )
+
+[node name="touch" parent="." instance=ExtResource( 12 )]

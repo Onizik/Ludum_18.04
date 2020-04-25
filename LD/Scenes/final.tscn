@@ -27,4 +27,9 @@ texture_normal = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 149.049, 548.081 )
+normal = ExtResource( 3 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

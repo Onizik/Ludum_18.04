@@ -20,3 +20,8 @@ func _ready():
 func _on_TextureButton_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 	Death.stop()
+
+
+func _on_TouchScreenButton_pressed():
+	get_tree().change_scene("res://Scenes/Menu.tscn")
+	Death.stop()

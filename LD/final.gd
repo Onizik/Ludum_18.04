@@ -19,3 +19,8 @@ func _ready():
 func _on_TextureButton_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 	Win.stop()
+
+
+func _on_TouchScreenButton_pressed():
+	get_tree().change_scene("res://Scenes/Menu.tscn")
+	Win.stop()
